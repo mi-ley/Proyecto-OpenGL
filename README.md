@@ -1,2 +1,5 @@
 # Proyecto-OpenGL
-Proyecto de curso
+
+Propuesta de Proyecto: Simulador de Vuelo en 3D.
+
+Este proyecto tiene como objetivo desarrollar un simulador de vuelo en 3D utilizando OpenGL y C++, permitiendo a los usuarios experimentar la sensación de volar un avión sobre un paisaje urbano. La simulación se basará en el desplazamiento del fondo, compuesto por imágenes satelitales como las de Google Maps o edificios en 3D, en lugar de mover la cámara directamente. El cielo será una imagen fija, y el usuario podrá controlar la simulación mediante el teclado para (simular) mover el avión visualmente en diferentes direcciones, mientras que con el mouse podrá ajustar la velocidad y cambiar el ángulo de visión es decir mover la cámara. Se integrarán efectos de sonido ambiental, como el viento, para mejorar la inmersión, así como una iluminación dinámica que cambiará cada 20 segundos, simulando las diferentes fases del día (mañana, mediodía, atardecer y noche) se verán los cambios de iluminación, con un ciclo completo de aproximadamente 2 minutos. Se empleará Blender o recursos preexistentes para el modelado 3D y archivos de audio en formato WAV o MP3. Este simulador ofrecerá una experiencia sencilla pero visualmente atractiva, sin la necesidad de implementar complejos algoritmos de física de vuelo, brindando una interfaz intuitiva y realista para los usuarios.
