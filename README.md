@@ -1,1 +1,2 @@
 # Proyecto-OpenGL
+The project consists of developing an interactive 3D video game aimed at children. The player controls a character who is locked in a room that has objects. The objective of the game is to explore the environment and interact with objects to find letters, vowels that formulate a word, these are hidden in the room. There are no complex puzzles or challenges; The focus is on free exploration, curiosity and word discovery, in a playful and educational way.
