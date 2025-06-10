@@ -2,8 +2,8 @@
 #include"glm/gtc/matrix_transform.hpp"
 
 
-const unsigned int width = 800;
-const unsigned int height = 800;
+const unsigned int width = 2000;
+const unsigned int height = 1800;
 
 
 int main()
@@ -13,6 +13,7 @@ int main()
 
 	// Tell GLFW what version of OpenGL we are using 
 	// In this case we are using OpenGL 3.3
+	glfwWindowHint(GLFW_MAXIMIZED, GL_TRUE);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	// Tell GLFW we are using the CORE profile
@@ -65,10 +66,11 @@ int main()
 	Camera camera(width, height, glm::vec3(0.0f, -15.0f, 150.0f));
 
 	// Load in a model
-	//Model bellsproout("bellsprout/scene.gltf",/rotacion/200.0f,80.0f,180.0f,/traslacion/-20.0f, -60.0f, -40.0f);
+	//Model bellsproout("bellsprout/scene.gltf",/*rotacion */ 200.0f, 180.0f, 0.0f, /* traslacion */ -20.0f, -60.0f, -40.0f, /*Escalacion*/1.0f, 1.0f, 1.0f);
 	//Model piso2("habitacion/scene.gltf",/rotacion/0.0f,0.0f,0.0f,/traslacion/0.0f,80.0,0.0f,/Escalacion/18.0f,8.0f,8.0f);
 	Model room("room/scene.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 0.0, 0.0f, /* Escalacion */ 18.0f, 8.0f, 8.0f);
 	Model Personaje("personaje/scene.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 1.0f, 1.0f, 1.0f);
+	Model Carro("1936cord/scene.gltf", /* rotacion */ 90.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 10.0f, 10.0f, 10.0f);
 
 
 	glm::mat4 view = glm::mat4(1.0f);
@@ -95,9 +97,9 @@ int main()
 		//bellsproout.Draw(shaderProgram, camera);
 
 		//piso2.Draw(shaderProgram, camera);
-
 		room.Draw(shaderProgram, camera);
 	    Personaje.Draw(shaderProgram, camera);
+		Carro.Draw(shaderProgram, camera);
 
 
 		// Swap the back buffer with the front buffer
