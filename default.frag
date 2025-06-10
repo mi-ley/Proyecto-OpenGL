@@ -2,7 +2,7 @@
 
 in vec3 FragPos;
 in vec3 Normal;
-in vec3 Color;      // (opcional, si no tienes vertex colors lo ignoras)
+in vec3 Color;      // 
 in vec2 TexCoord;
 
 // -----------------------------------
@@ -25,7 +25,7 @@ out vec4 FragColor;
 void main()
 {
     // -------------------------------------------------------
-    // 1) Albedo (base color)
+    // 1) base color
     // -------------------------------------------------------
     vec3 albedo = texture(baseColor0, TexCoord).rgb;
     // Si tus UV vienen invertidas en Y, podrías hacer:

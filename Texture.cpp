@@ -10,7 +10,16 @@ Texture::Texture(const char* image, const char* texType, GLuint slot)
 	// Flips the image so it appears right side up
 	stbi_set_flip_vertically_on_load(true);
 	// Reads the image from a file and stores it in bytes
+	//unsigned char* bytes = stbi_load(image, &widthImg, &heightImg, &numColCh, 0);
 	unsigned char* bytes = stbi_load(image, &widthImg, &heightImg, &numColCh, 0);
+	if (!bytes)
+	{
+		std::cerr << "Error loading texture: " << image << std::endl;
+		throw std::runtime_error("Failed to load texture");
+	}
+
+	std::cout << "Loaded texture: " << image << " (" << widthImg << "x" << heightImg << "), Channels: " << numColCh << std::endl;
+
 
 	// Generates an OpenGL texture object
 	glGenTextures(1, &ID);
@@ -32,7 +41,7 @@ Texture::Texture(const char* image, const char* texType, GLuint slot)
 	// glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, flatColor);
 
 	// Check what type of color channels the texture has and load it accordingly
-	if (numColCh == 4)
+	/*if (numColCh == 4)
 		glTexImage2D
 		(
 			GL_TEXTURE_2D,
@@ -72,7 +81,18 @@ Texture::Texture(const char* image, const char* texType, GLuint slot)
 			bytes
 		);
 	else
+		throw std::invalid_argument("Automatic Texture type recognition failed");*/
+	if (numColCh == 4)
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, widthImg, heightImg, 0, GL_RGBA, GL_UNSIGNED_BYTE, bytes);
+	else if (numColCh == 3)
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, widthImg, heightImg, 0, GL_RGB, GL_UNSIGNED_BYTE, bytes);
+	else if (numColCh == 2)
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RG, widthImg, heightImg, 0, GL_RG, GL_UNSIGNED_BYTE, bytes);
+	else if (numColCh == 1)
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, widthImg, heightImg, 0, GL_RED, GL_UNSIGNED_BYTE, bytes);
+	else
 		throw std::invalid_argument("Automatic Texture type recognition failed");
+
 
 	// Generates MipMaps
 	glGenerateMipmap(GL_TEXTURE_2D);
