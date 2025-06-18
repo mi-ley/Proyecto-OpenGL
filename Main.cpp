@@ -8,6 +8,8 @@ const unsigned int height = 1800;
 
 int main()
 {
+	try
+	{
 	// Initialize GLFW
 	glfwInit();
 
@@ -68,8 +70,14 @@ int main()
 	// Load in a model
 	
 	Model room("room/scene.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 0.0, 0.0f, /* Escalacion */ 18.0f, 8.0f, 8.0f);
-	Model Personaje("personaje/scene.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 1.0f, 1.0f, 1.0f);
+	//Model Personaje("personaje/scene.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 1.0f, 1.0f, 1.0f);
 	//Model Avocado("Avocado/scene.gltf", /* rotacion */ 0.0f, 0.0f, 0.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 100.0f, 100.0f, 100.0f);
+    Model TorzoYCabeza("TorzoYCabeza/TorzoCabeza.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 10.0f, 10.0f, 10.0f);
+	Model BrazoI("BrazoI/BrazoIzquierdo.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 10.0f, 10.0f, 10.0f);
+	Model BrazoD("BrazoD/BrazoDerecho.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 10.0f, 10.0f, 10.0f);
+	Model PiernaI("PiernaI/PiernaIzquierda.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 10.0f, 10.0f, 10.0f);
+	Model PiernaD("PiernaD/PiernaDerecha.gltf", /* rotacion */ 0.0f, 0.0f, 90.0f, /* traslacion */ 0.0f, 8.0, 0.0f, /* Escalacion */ 10.0f, 10.0f, 10.0f);
+
 
 
 	glm::mat4 view = glm::mat4(1.0f);
@@ -97,7 +105,12 @@ int main()
 
 		
 		room.Draw(shaderProgram, camera);
-	    Personaje.Draw(shaderProgram, camera);
+	    //Personaje.Draw(shaderProgram, camera);
+		TorzoYCabeza.Draw(shaderProgram, camera);
+		BrazoI.Draw(shaderProgram, camera);
+		BrazoD.Draw(shaderProgram, camera);
+		PiernaI.Draw(shaderProgram, camera);
+		PiernaD.Draw(shaderProgram, camera);
 		
 
 
@@ -116,4 +129,12 @@ int main()
 	// Terminate GLFW before ending the program
 	glfwTerminate();
 	return 0;
+ }
+ catch (const std::exception& e)
+ {
+	 std::cerr << "Error cargando el modelo: " << e.what() << std::endl;
+	 return EXIT_FAILURE;
+ }
+
+ return EXIT_SUCCESS;
 }
