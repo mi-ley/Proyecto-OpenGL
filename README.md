@@ -18,6 +18,26 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 
 ![carpeta](https://github.com/user-attachments/assets/ea5508f6-4076-4081-b050-2511a554e01e)  **Steps to clone a repository:** 
 
+ 1. Download and Install Git
+    - To begin, it is essential to download and install Git. If you are using Windows, you can access the installer via the following     link: https://git-scm.com/downloads/win
+
+2. Create a Working Directory
+    - Create a folder on your local drive where the repository will be cloned. This folder will serve as the central location for all project files
+     
+3. Initialize the Repository
+   - Once the folder is created, right-click inside it and select the "Git Bash Here" option to open the Git Bash terminal in that directory. Then, run the following command to initialize the local repository:  git init
+
+4. Clone the Remote Repository
+   - After initializing the repository, proceed to clone the remote repository by executing the following command: git clone and next to the command paste the following: https://github.com/mi-ley/Proyecto-OpenGL.git
+
+
+
+
+
+
+
+
+
 
 
 ![enlace-roto](https://github.com/user-attachments/assets/cdb92acc-9ef0-4dff-9bef-a043a208f0a1)  **Video link:**
