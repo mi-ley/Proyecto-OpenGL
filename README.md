@@ -15,7 +15,8 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 
 
 
-**Steps to clone a repository:** 
+
+![carpeta](https://github.com/user-attachments/assets/ea5508f6-4076-4081-b050-2511a554e01e)  **Steps to clone a repository:** 
 
 
 
