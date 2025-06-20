@@ -9,13 +9,16 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 **Keywords:**  
 Hide and Seek, videogame, OpenGL, 3D, C++. 
 
+
+
 **Steps to clone a repository:** 
 
 
 **Video link:**
-  
+
+          
 **Authors:**  
-*Traña Castañeda Mileyda Ines  
-*Varela Alvarez Mario Antonio   
-*Espinoza Guerrero Elizabeth de los Angeles    
-*Manzanares Ruiz Aron Cristopher 
+- Traña Castañeda Mileyda Ines  
+- Varela Alvarez Mario Antonio   
+- Espinoza Guerrero Elizabeth de los Angeles    
+- Manzanares Ruiz Aron Cristopher 
