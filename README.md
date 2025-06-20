@@ -69,6 +69,7 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 
 
 ![enlace-roto](https://github.com/user-attachments/assets/cdb92acc-9ef0-4dff-9bef-a043a208f0a1)  **Video link:**    
+    https://youtu.be/3WCq3zjbMeM     
         
 
 ![usuario](https://github.com/user-attachments/assets/5c538c68-caaf-4f0d-9750-f720dfa2d9f1)  **Authors:** 
