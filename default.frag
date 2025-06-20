@@ -62,13 +62,13 @@ void main()
     vec3 halfway  = normalize(lightDir + viewDir);
 
     // Difusa
-    float diff = max(dot(finalNormal, lightDir), 0.0);
+    float diff = max(dot(finalNormal, lightDir), 1.3);
 
     // Especular (Blinn?Phong)
     float spec = pow(max(dot(finalNormal, halfway), 0.0), 32.0);
 
     // Ambiente (factor 0.1) atenuado por AO
-    vec3 ambient = 0.1 * albedo * ao;
+    vec3 ambient = 1.0 * albedo * ao;
 
     // Difuso
     vec3 diffuse = diff * albedo * lightColor.rgb;

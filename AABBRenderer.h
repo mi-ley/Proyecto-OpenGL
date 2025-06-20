@@ -1,4 +1,4 @@
-// Draw an AABB as lines
+// Draws an AABB as lines
 #pragma once
 #include <glm/glm.hpp>
 #include <vector>
@@ -46,13 +46,13 @@ public:
         glEnableVertexAttribArray(0);
         shader.Activate();
         camera.Matrix(shader, "view");
-        // Enviar proyección
+        // Send projection
         GLint projLoc = glGetUniformLocation(shader.ID, "projection");
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)camera.width / camera.height, 0.1f, 1000.0f);
         glUniformMatrix4fv(projLoc, 1, GL_FALSE, &projection[0][0]);
         glUniformMatrix4fv(glGetUniformLocation(shader.ID, "model"), 1, GL_FALSE, &glm::mat4(1.0f)[0][0]);
         glUniform3fv(glGetUniformLocation(shader.ID, "lineColor"), 1, &color[0]);
-        glLineWidth(3.0f); // Grosor de línea
+        glLineWidth(3.0f); // Line thickness
         glDrawArrays(GL_LINES, 0, (GLsizei)lines.size());
         glBindVertexArray(0);
     }

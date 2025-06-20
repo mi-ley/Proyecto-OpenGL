@@ -10,14 +10,17 @@ using json = nlohmann::json;
 class Model
 {
 public:
-	// Loads in a model from a file and stores tha information in 'data', 'JSON', and 'file'
+	// Loads in a model from a file and stores the information in 'data', 'JSON', and 'file'
 	Model(const char* file, 
 		/*Rotacion*/float radiansx, float radiansy, float radiansz,
 		/*Traslacion*/float x, float y, float z,
 		/*Escalacion*/float Escalarx, float Escalary, float Escalarz);
 	void Draw(Shader& shader, Camera& camera);
 
-	//void traslacion(Shader& shader, Camera& camera, glm::mat4 transform = glm::mat4(1.0f));
+	// Draws the model with an external model matrix
+	void Draw(Shader& shader, Camera& camera, const glm::mat4& modelMatrix);
+
+	//void translation(Shader& shader, Camera& camera, glm::mat4 transform = glm::mat4(1.0f));
 	//void Draw(Shader& shader, Camera& camera);
 
 private:

@@ -5,7 +5,7 @@ struct AABB {
     glm::vec3 min;
     glm::vec3 max;
 
-    // Transforma el AABB con una matriz de modelo
+    // Transforms the AABB with a model matrix
     AABB transform(const glm::mat4& model) const {
         glm::vec3 corners[8] = {
             min,

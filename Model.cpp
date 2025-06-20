@@ -49,6 +49,15 @@ void Model::Draw(Shader& shader, Camera& camera)
 	}
 }
 
+void Model::Draw(Shader& shader, Camera& camera, const glm::mat4& modelMatrix)
+{
+	for (unsigned int i = 0; i < meshes.size(); i++)
+	{
+		// Usar la matriz externa multiplicada por la matriz local de cada mesh
+		meshes[i].Mesh::Draw(shader, camera, modelMatrix * matricesMeshes[i]);
+	}
+}
+
 /*
 
 void Model::loadMesh(unsigned int indMesh)
@@ -168,7 +177,10 @@ void Model::loadMesh(unsigned int indMesh)
 			std::string fullPath = fileDirectory + imagePath;
 
 			// Crea la textura con tipo "baseColor"
-			Texture diffuseTex(fullPath.c_str(), "baseColor", texturesParaEsteMesh.size());
+			Texture diffuseTex(fullPath.c_str(), "baseColor", static_cast<GLuint>(texturesParaEsteMesh.size()));
+			
+
+
 			texturesParaEsteMesh.push_back(diffuseTex);
 		}
 
@@ -180,9 +192,10 @@ void Model::loadMesh(unsigned int indMesh)
 				["pbrMetallicRoughness"]["metallicRoughnessTexture"]["index"];
 			unsigned int imgIndex = JSON["textures"][texIndex]["source"];
 			std::string imagePath = JSON["images"][imgIndex]["uri"].get<std::string>();
+
 			std::string fullPath = fileDirectory + imagePath;
 
-			Texture mrTex(fullPath.c_str(), "metallicRoughness", texturesParaEsteMesh.size());
+			Texture mrTex(fullPath.c_str(), "metallicRoughness", static_cast<GLuint>(texturesParaEsteMesh.size()));
 			texturesParaEsteMesh.push_back(mrTex);
 		}
 
@@ -194,7 +207,7 @@ void Model::loadMesh(unsigned int indMesh)
 			std::string imagePath = JSON["images"][imgIndex]["uri"].get<std::string>();
 			std::string fullPath = fileDirectory + imagePath;
 
-			Texture normalTex(fullPath.c_str(), "normalMap", texturesParaEsteMesh.size());
+			Texture normalTex(fullPath.c_str(), "normalMap", static_cast<GLuint>(texturesParaEsteMesh.size()));
 			texturesParaEsteMesh.push_back(normalTex);
 		}
 
@@ -206,7 +219,7 @@ void Model::loadMesh(unsigned int indMesh)
 			std::string imagePath = JSON["images"][imgIndex]["uri"].get<std::string>();
 			std::string fullPath = fileDirectory + imagePath;
 
-			Texture occTex(fullPath.c_str(), "occlusionMap", texturesParaEsteMesh.size());
+			Texture occTex(fullPath.c_str(), "occlusionMap", static_cast<GLuint>(texturesParaEsteMesh.size()));
 			texturesParaEsteMesh.push_back(occTex);
 		}
 	}
@@ -440,7 +453,7 @@ std::vector<Texture> Model::getTextures()
 			// Load diffuse texture
 			if (texPath.find("baseColor") != std::string::npos)
 			{
-				Texture diffuse = Texture((fileDirectory + texPath).c_str(), "diffuse", loadedTex.size());
+				Texture diffuse = Texture((fileDirectory + texPath).c_str(), "diffuse", static_cast<GLuint>(loadedTex.size()));
 				textures.push_back(diffuse);
 				loadedTex.push_back(diffuse);
 				loadedTexName.push_back(texPath);
@@ -448,7 +461,7 @@ std::vector<Texture> Model::getTextures()
 			// Load specular texture
 			else if (texPath.find("metallicRoughness") != std::string::npos)
 			{
-				Texture specular = Texture((fileDirectory + texPath).c_str(), "specular", loadedTex.size());
+				Texture specular = Texture((fileDirectory + texPath).c_str(), "specular", static_cast<GLuint>(loadedTex.size()));
 				textures.push_back(specular);
 				loadedTex.push_back(specular);
 				loadedTexName.push_back(texPath);

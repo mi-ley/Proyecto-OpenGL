@@ -27,9 +27,13 @@ public:
 	int width;
 	int height;
 
-	// Adjust the speed of the camera and it's sensitivity when looking around
+	// Adjust the speed of the camera and its sensitivity when looking around
 	float speed = 0.05f;
 	float sensitivity = 100.0f;
+
+	// Allow external control to block movement
+	bool allowMovement = true;
+	void SetAllowMovement(bool allow) { allowMovement = allow; }
 
 	// Camera constructor to set up initial values
 	Camera(int width, int height, glm::vec3 position);
