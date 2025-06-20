@@ -47,6 +47,11 @@ int main()
     Model Personaje("personaje/scene.gltf", /* rotation */ 0.0f, 0.0f, 90.0f, /*translation */ 0.0f, 8.0, 0.0f, /* Scale */ 1.0f, 1.0f, 1.0f);
     Model LamparaPapel("lampara_papel/scene.gltf", /* rotation */ 0.0f, 0.0f, 90.0f, /*translation */ 0.0f, 100.0, 0.0f, /* Scale */ 1.0f, 1.0f, 1.0f);
     Model LamparaPapel2("lampara_papel/scene.gltf", /* rotation */ 0.0f, 0.0f, 90.0f, /*translation */ -100.0f, 100.0, 0.0f, /* Scale */ 1.0f, 1.0f, 1.0f);
+    Model F1("letra_f/scene.gltf", /* rotation */ 0.0f, 0.0f, 90.0f, /*translation */ 30.0f, -20.0, -10.0f, /* Scale */ 0.3f, 0.3f, 0.3f);
+    Model U1("letra_u/scene.gltf", /* rotation */ 0.0f, 0.0f, 90.0f, /*translation */ -100.0f, -25.0, -40.0f, /* Scale */ 0.3f, 0.3f, 0.3f);
+
+    Model F2("letra_f/scene.gltf", /* rotation */ 180.0f, 0.0f, 90.0f, /*translation */ -150.0f, -15.0, -40.0f, /* Scale */ 0.5f, 0.5f, 0.5f);
+    Model U2("letra_u/scene.gltf", /* rotation */ 0.0f, 0.0f, 90.0f, /*translation */ -70.0f, -18.0, -5.0f, /* Scale */ 0.5f, 0.5f, 0.5f);
 
     // --- Definición de AABB para room, personaje y lámparas ---
     // (Valores aproximados, deben ajustarse según el modelo real)
@@ -71,6 +76,14 @@ int main()
     static double lastX = SCR_WIDTH / 2.0; // Para el seguimiento del mouse
     static bool firstMouse = true;
 
+    // Variables para controlar la aparición/desaparición de U1/U2 y F1/F2
+    static bool u1Eliminado = false;
+    static bool f1Eliminado = false;
+    // Coordenadas de U1 y F1 (actualizadas con las reales)
+    glm::vec3 u1Pos = glm::vec3(-121.42f, -30.0f, -51.02f);
+    glm::vec3 f1Pos = glm::vec3(17.08f, -30.0f, -21.50f);
+    float radioTrigger = 2.0f; // Distancia para activar el evento
+
     // Bucle principal
     while (!glfwWindowShouldClose(window))
     {
@@ -78,12 +91,27 @@ int main()
         camera.Inputs(window);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        // Si el personaje está cerca de U1, eliminar U1 y mostrar U2
+        if (!u1Eliminado && glm::distance(personajePos, u1Pos) < radioTrigger) {
+            u1Eliminado = true;
+        }
+        // Si el personaje está cerca de F1, eliminar F1 y mostrar F2
+        if (!f1Eliminado && glm::distance(personajePos, f1Pos) < radioTrigger) {
+            f1Eliminado = true;
+        }
         // --- OBJECT SHADER ---
         objectShader.Activate();
-        // Sends camMatrix, lightPos, lightColor and camPos
         camera.updateMatrix(45.0f, 0.1f, 1000.0f);
-
-        // Draw room and character with Phong lighting
+        // F1 y U1 en blanco solo si no han sido eliminados
+        glUniform3f(glGetUniformLocation(objectShader.ID, "objectColor"), 1.0f, 1.0f, 1.0f);
+        if (!f1Eliminado) F1.Draw(objectShader, camera);
+        if (!u1Eliminado) U1.Draw(objectShader, camera);
+        // F2 y U2 en rojo solo si han sido eliminados los anteriores
+        glUniform3f(glGetUniformLocation(objectShader.ID, "objectColor"), 1.0f, 0.0f, 0.0f);
+        if (f1Eliminado) F2.Draw(objectShader, camera);
+        if (u1Eliminado) U2.Draw(objectShader, camera);
+        // Resto de modelos con color blanco por defecto
+        glUniform3f(glGetUniformLocation(objectShader.ID, "objectColor"), 1.0f, 1.0f, 1.0f);
         room.Draw(objectShader, camera);
         Personaje.Draw(objectShader, camera);
 
@@ -218,9 +246,8 @@ int main()
             lastX = xpos;
             personajeYaw -= xoffset * mouseSensitivity;
             glfwSetCursorPos(window, centerX, centerY);
-            lastX = centerY;
+            lastX = centerX;
         }
-
         // --- Update character model ---
         glm::mat4 personajeModel = glm::translate(glm::mat4(1.0f), personajePos)
             * glm::rotate(glm::mat4(1.0f), glm::radians(personajeYaw), glm::vec3(0, 1, 0));

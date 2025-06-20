@@ -1,0 +1,11 @@
+Model Information:
+* title:	Letra_F
+* source:	https://sketchfab.com/3d-models/letra-f-dcbb90e859b7405ebbf06ce768676bce
+* author:	tomkorr (https://sketchfab.com/tomkorr)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Letra_F" (https://sketchfab.com/3d-models/letra-f-dcbb90e859b7405ebbf06ce768676bce) by tomkorr (https://sketchfab.com/tomkorr) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
