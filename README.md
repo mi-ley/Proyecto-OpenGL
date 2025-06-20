@@ -106,6 +106,10 @@ After successfully extracting the files, locate the file named "proyecto". Run t
 3. Compilation Tools:
    - C++ Compiler: Visual Studio 2019 or 2022.
 
+## License
+
+Este proyecto está bajo la licencia [MIT](LICENSE).
+
 
 
 
