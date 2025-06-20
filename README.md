@@ -37,3 +37,18 @@ this video game, we used the C++ programming language and the OpenGL graphics li
 
 ![requerimiento](https://github.com/user-attachments/assets/11aec185-fcdc-4d28-8b72-447a8b212353)  **Minimum requirements:**    
 
+1. Hardware:
+   - GPU: A graphics card that supports, at a minimum, OpenGL 3.3 Core Profile is required.
+   - CPU: A modern processor is necessary; any CPU released in the last decade will meet the requirements.
+   - RAM: A minimum of 4 GB is required, although 8 GB is recommended for optimal performance when loading complex scenes.
+   - Disk Space: Approximately 100 MB is needed for the executable and its libraries. If the project includes numerous models and textures, an additional 200 MB is recommended.
+
+2. Operating System:
+   - Windows 10 or later.
+
+3. Compilation Tools:
+   - C++ Compiler: Visual Studio 2019 or 2022.
+
+
+
+
