@@ -22,3 +22,10 @@ Hide and Seek, videogame, OpenGL, 3D, C++.
 - Varela Alvarez Mario Antonio   
 - Espinoza Guerrero Elizabeth de los Angeles    
 - Manzanares Ruiz Aron Cristopher 
+
+
+**Installer:**            
+
+
+**Minimum requirements:**    
+
