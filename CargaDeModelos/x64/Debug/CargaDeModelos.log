@@ -1,0 +1,42 @@
+﻿  Camera.cpp
+  EBO.cpp
+  imgui.cpp
+  imgui_impl_glfw.cpp
+  imgui_impl_opengl3.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  Main.cpp
+  Mesh.cpp
+  Model.cpp
+  shaderClass.cpp
+  stb.cpp
+  Texture.cpp
+  VAO.cpp
+  VBO.cpp
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\VAO.cpp(13,63): warning C4244: 'argumento': conversión de 'GLsizeiptr' a 'GLsizei'; posible pérdida de datos
+  Generando código...
+  glad.c
+glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(input.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(init.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(monitor.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(window.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_window.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_window.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(context.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_time.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_time.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_thread.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_thread.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(platform.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(platform.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(vulkan.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_init.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_monitor.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_monitor.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(wgl_context.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(wgl_context.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(egl_context.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(egl_context.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(osmesa_context.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(osmesa_context.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_init.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(null_init.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_module.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_module.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(win32_joystick.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_monitor.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(null_monitor.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_window.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(null_window.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(null_joystick.obj) : warning LNK4099: no se encontró PDB 'glfw3.pdb' con 'glfw3.lib(null_joystick.obj)' o en 'C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\glfw3.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  CargaDeModelos.vcxproj -> C:\Users\caost\source\repos\CargaDeModelos\x64\Debug\PROYECTO.exe

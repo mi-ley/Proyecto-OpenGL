@@ -1,0 +1,11 @@
+Model Information:
+* title:	Personaje
+* source:	https://sketchfab.com/3d-models/personaje-5540937844f6427f93e9a64ab90266da
+* author:	Kurnazart (https://sketchfab.com/Kurnazart)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Personaje" (https://sketchfab.com/3d-models/personaje-5540937844f6427f93e9a64ab90266da) by Kurnazart (https://sketchfab.com/Kurnazart) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

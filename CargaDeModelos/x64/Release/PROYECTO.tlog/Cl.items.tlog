@@ -1,0 +1,17 @@
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\Camera.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\Camera.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\EBO.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\EBO.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\glad.c;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\glad.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\librerias\include\imgui\imgui\backends\imgui_impl_glfw.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\imgui_impl_glfw.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\librerias\include\imgui\imgui\backends\imgui_impl_opengl3.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\imgui_impl_opengl3.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\librerias\include\imgui\imgui\imgui.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\imgui.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\librerias\include\imgui\imgui\imgui_draw.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\imgui_draw.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\librerias\include\imgui\imgui\imgui_tables.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\imgui_tables.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\librerias\include\imgui\imgui\imgui_widgets.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\imgui_widgets.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\Main.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\Main.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\Mesh.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\Mesh.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\Model.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\Model.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\shaderClass.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\shaderClass.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\stb.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\stb.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\Texture.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\Texture.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\VAO.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\VAO.obj
+C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\VBO.cpp;C:\Users\caost\source\repos\CargaDeModelos\CargaDeModelos\x64\Release\VBO.obj
